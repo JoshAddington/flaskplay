@@ -6,8 +6,10 @@ from stock_scraper import get_data
 
 application = app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
-print(os.environ['APP_SETTINGS'])
+
 db = SQLAlchemy(app)
+
+from models import Station
 
 @app.route("/")
 def index():
@@ -28,4 +30,4 @@ def data():
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port)
