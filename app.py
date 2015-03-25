@@ -5,7 +5,8 @@ from mapper import get_boroughs
 from stock_scraper import get_data
 
 application = app = Flask(__name__)
-app.config.from_pyfile('config.py')
+app.config.from_object(os.environ['APP_SETTINGS'])
+print(os.environ['APP_SETTINGS'])
 db = SQLAlchemy(app)
 
 @app.route("/")
