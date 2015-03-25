@@ -1,0 +1,79 @@
+
+<html>
+<head>
+         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+          <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Poiret+One|Fira+Sans:300'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href={{ url_for('static', filename='style.css') }} rel="stylesheet" media="screen">
+
+        <style>
+        #boroughs {
+                stroke: grey;
+                stroke-width: 2px;
+                fill: none;
+        }
+        </style>
+        <title>Josh Addington</title>
+</head>
+<body>
+<div class="page-header">
+
+
+        <a href="/post/drafts/" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+
+        <a href="/post/new/" class='top-menu'><span class='glyphicon glyphicon-plus'></span></a>
+
+
+        <div class="nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/projects/">Projects</a>
+                <a href="/contact/">Contact</a>
+        </div>
+        <h1><a href='/'>Josh Addington</a></h1>
+</div>
+<div class="content container">
+        <div class="row">
+                <div class="col-md-11">
+
+
+
+
+        <div class="project">
+                <div class="date">
+
+                        <a href="/projects/2/publish/"><input type="submit" value="Publish" class="mybutton spaced"></a><br>
+
+
+
+                        <a  href="/projects/2/edit/" class="mybutton small"><span class="glyphicon glyphicon-edit"></span></a>
+                        <a href="/projects/2/delete/" class="mybutton small"><span class="glyphicon glyphicon-remove"></span></a>
+
+                </div>
+
+                <h2>Citibike Visualization - Mapbox.js</h2>
+                <div class="project-post">
+                        <div class="post-relation">
+
+                        </div>
+                        <p><link href={{ url_for('static', filename='mapbox-gl.css') }} rel='stylesheet' /><br /><script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.6.0/mapbox-gl.js'></script><br /></p>
+                </div>
+                <div class="project-code">
+                        <div id="map"></div>
+                </div>
+        </div>
+
+
+                </div>
+        </div>
+</div>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src={{ url_for('static', filename='citibike-leaflet.js') }}></script>
+
+</body>
+</html>
