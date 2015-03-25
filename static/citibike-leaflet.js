@@ -1,5 +1,5 @@
 var map = new L.Map("map", {center: [40.73394999, -73.96100056], zoom: 12})
-    .addLayer(new L.TileLayer("http://{s}.tiles.mapbox.com/v4/joshaddington.l8aja3lb/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoiam9zaGFkZGluZ3RvbiIsImEiOiI3YkZxMFJnIn0.iVv6sgsySboP3BaH8KqGbA", {
+    .addLayer(new L.TileLayer("//{s}.tiles.mapbox.com/v4/joshaddington.l8aja3lb/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoiam9zaGFkZGluZ3RvbiIsImEiOiI3YkZxMFJnIn0.iVv6sgsySboP3BaH8KqGbA", {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }));
 
