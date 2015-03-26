@@ -2,14 +2,14 @@ import os
 from flask import Flask, render_template, jsonify, config
 from flask.ext.sqlalchemy import SQLAlchemy
 from mapper import get_boroughs
-#from models import Station, Bike
+from models import db, Station, Bike
 from stock_scraper import get_data
 
 application = app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 
-db = SQLAlchemy(app)
 
+db.init_app(app)
 
 @app.route("/")
 def index():
